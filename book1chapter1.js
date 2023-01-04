@@ -13,7 +13,7 @@ b is a variable expression
 b * 2 is an arithmetic expression
 a = b * 2 is an assignment expression
 
-alert(a) is a statement, because it performs a task, the task of calling a function. It is also an expression because it can be evaluated.
+alert(a) is a statement, because it performs a task, the task of calling a function. It is also an expression because it can be evaluated (it evaluates to undefined).
 So it's an expression statement.
 */
 
@@ -53,7 +53,7 @@ The loose-equals operator first performs implicit coercion on one of the operand
 */
 var result = '99.99' == 99.99 // the left hand side string literal will be implicitly coerced to number before a comparison takes place
 /*
-There are rules for implicit coercion.
+There are rules for implicit coercion, which we'll see ahead.
 */
 
 /*
@@ -61,15 +61,15 @@ Comments should be used to explain why, not what.
 */
 
 /*
-A variable is called such a name because its content can vary during the course of the program.
+A variable is called such a name because its value can vary during the course of the program.
 The sole purpose of variables is holding program state.
 
 JS's Weak Typing (aka Dynamic Typing) means the variables are not assigned types, just the values. So in JS a variable can hold a value of any type.
 
-People call constants variables, or "constant variables", but that's contradictory. Just call them constants, they don't vary.
+People call constants variables, or "constant variables", but that's contradictory. Just call them constants, as they don't vary.
 The constant naming convention of JS is ALL_CAPS_WITH_UNDERSCORES.
 The function-scoped keyword var doesn't prevent you from changing the value of a constant. The naming convention for constants helps us avoid that mistake.
-The block-scoped keyword const doesn't let us reassign a constant.
+The newer block-scoped keyword const, on the other hand, doesn't let us reassign a constant.
 */
 
 /*
@@ -100,8 +100,8 @@ one() // 1
 two() // 2
 
 /*
-Scopes can be nested. Code inside the innermost scope can access variables from the outer scopes too.
-Lexical scope rules say that code in one scope can access variables of either that scope or any scope outside of it.
+Scopes can be nested. Code inside the innermost scope can access variables from the outer scopes.
+Lexical scope rules say that code in one scope can access variables of either that scope or any scope outside of it. LEX LOOKS OUTSIDE
 */
 function outer() {
   var a = 1
